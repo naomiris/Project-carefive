@@ -67,8 +67,8 @@ export default {
     };
   },
 
-  mounted() {
-    this.getData();
+  mounted: async function() {
+    this.list = await this.getData();
   },
   methods: {
     async getData() {
