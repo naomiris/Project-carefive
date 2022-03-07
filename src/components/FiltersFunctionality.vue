@@ -35,6 +35,10 @@ export default {
  border-radius: 10px;
  width: auto;
  cursor: pointer;
+ padding: 5px 10px;
+}
+.buttonFilters:hover{
+  background-color:#356eea ;
 }
 
 </style>

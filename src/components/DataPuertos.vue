@@ -48,6 +48,7 @@
 <script>
 import FilterFunctionality from './FiltersFunctionality.vue'
 import IconSearch from '@/components/IconSearch.vue'
+const {VUE_APP_ENDPOINT} = process.env
 
 export default {
   name: "DataPuertos",
@@ -74,7 +75,7 @@ export default {
     async getData() {
       for (let i = 1; i <= 25; i++) {
         const respuesta = await this.axios.get(
-          `http://apitest.cargofive.com/api/ports?page=${i}`
+          `${VUE_APP_ENDPOINT}${i}`
         );
         this.list.push(respuesta.data.data);
       }
